@@ -8,15 +8,7 @@ export default function Home() {
         <title>RyanBrianJones | Freelance Web Development</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.navbar}>
-        <div className={styles.navbar_main}>
-          <img src="/logo.png" width="75" height="63"/>
-          Ryan Brian Jones
-
-        </div>
-      </div>
       <main className={styles.main}>
-        yeet
 
       </main>
     </div>
