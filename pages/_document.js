@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import styles from '../styles/Home.module.css'
+
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -13,14 +13,11 @@ class MyDocument extends Document {
         <Head>
         <link rel="shortcut icon" href="/favicon.ico" /> 
         <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"></link>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         </Head>
         <body>
-          <div className={styles.navbar}>
-            <div className={styles.navbar_main}>
-              <img className={styles.logo} src="/logo.png"/>
-              <span className={styles.header_font}>RYAN   BRIAN   JONES</span>
-            </div>
-          </div>
           <Main />
           <NextScript />
         </body>

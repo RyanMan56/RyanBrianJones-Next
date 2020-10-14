@@ -1,0 +1,68 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main{
+  max-width: 1200px;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: whitesmoke;  
+  padding: 2.5% 0 5% 0;
+  justify-content: space-around;
+  
+  @media only screen and (min-height: 1200px) {
+    padding: 5% 0 10% 0;
+  }
+}
+
+.logo {
+    width: 85px;
+    height: 70.11px;
+}
+
+
+
+.hero_ryan {
+  height: 300px;
+}
+
+.title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 84px;
+  text-align: center;
+  letter-spacing: 0.075em;
+  background: -webkit-linear-gradient(top, #F568AB 0%, #F7E056 112%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.navigation_buttons {
+  button, span {
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: 0.09em;
+    color: #F7E056;
+    appearance: none;
+    background-color: unset;
+    border: none;
+  }
+
+  button:hover {
+    font-weight: 400;
+    color: #5bbde0;
+  }
+}
