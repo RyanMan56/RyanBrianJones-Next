@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import Header from "../components/Header"
+import Waves from "../components/Waves.js"
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
           <button>CONTACT</button>
         </div>
       </main>
+      <Waves/>
     </div>
   )
 }
