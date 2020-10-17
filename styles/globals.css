@@ -3,8 +3,22 @@ body {
   background-color: #270079;
   padding: 0;
   margin: 0;
-  font-family:  -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+h2 {
+  font-family: Roboto;
+  font-size: 55px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  /* background: -webkit-linear-gradient(top, #F568AB 45%, #F568AB 85%); */
+  /* background: -webkit-linear-gradient(top, #F568AB 0%, #F7E056 120%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  /* background-color: #F568AB; */
+  color: #F568AB;
+  margin-bottom: 0.5em;
 }
 
 a {

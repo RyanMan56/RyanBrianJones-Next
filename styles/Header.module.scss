@@ -19,6 +19,9 @@
   height: 80px;
   box-shadow: 0px 4px 4px 0px #00000040;
   min-height: unset;
+  position: fixed;
+  background-color: #270079;
+  z-index: 1;
 }
 
 .navbar_main {
