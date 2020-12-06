@@ -1,6 +1,7 @@
 html,
 body {
-  background-color: #270079;
+  /* background-color: #270079; */
+  background: -webkit-linear-gradient(top, #270079 0%, #F568AB 200%);
   padding: 0;
   margin: 0;
   font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,

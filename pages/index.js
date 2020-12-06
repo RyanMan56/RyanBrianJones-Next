@@ -7,20 +7,23 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>RyanBrianJones | Freelance Web Development</title>
+        <title>Ryan Brian Jones | Freelance Web Development</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
       <main className={styles.main}> 
         <img src="/logo.png" className={styles.hero_ryan} />   
-        <h1 className={styles.title}>FREELANCE WEB<br/>DEVELOPER</h1>
-        <div className={styles.navigation_buttons}>
-          <button>ABOUT</button>
-          <span> | </span>
-          <button>PORTFOLIO</button>
-          <span> | </span>
-          <button>CONTACT</button>
-        </div>
+        {/* <div> */}
+          <h1 className={styles.title}>FREELANCE WEB<br/>DEVELOPER</h1>
+          <div className={styles.navigation_buttons}>
+            <button>ABOUT</button>
+            <span> | </span>
+            {/* <button>PORTFOLIO</button> */}
+            <button>WHY US</button>
+            <span> | </span>
+            <button>CONTACT</button>
+          </div>
+        {/* </div> */}
       </main>
       <Waves/>
       
