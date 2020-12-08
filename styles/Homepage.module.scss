@@ -83,10 +83,21 @@
     font-weight: 200;
     margin: 1.5% 0;
     position: relative;
-    animation: fadeIn 300ms;
+    animation: bioFadeIn 300ms;
     animation-fill-mode: forwards;
     opacity: 0;
     top: 50px;
+  }
+
+  @keyframes bioFadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 60%;
+      top: 0;
+    }
   }
 
   @keyframes fadeIn {
