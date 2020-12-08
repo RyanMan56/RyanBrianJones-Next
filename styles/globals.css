@@ -1,6 +1,7 @@
 html {
-  background: #270079;
-  background: -webkit-linear-gradient(top, #270079 0%, #F568AB 200%);
+  /* background: #270079; */
+  /* background: -webkit-linear-gradient(top, #270079 0%, #F568AB 200%); */
+  background-color: #1c1b1f;;
 }
 
 html body {

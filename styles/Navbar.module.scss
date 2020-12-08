@@ -1,0 +1,24 @@
+.container {
+  position: fixed;
+  width: 60px;
+  top: 0;
+  bottom: 0;
+  // background-color: #170046;
+  background-color: #1c1b1f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  img {
+    padding: 2px;
+  }
+}
+
+.navIcons {
+  top: 40%;
+
+  img {
+    width: 60px;
+    padding: 12px;
+  }
+}
