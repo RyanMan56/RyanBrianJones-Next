@@ -1,0 +1,42 @@
+.navIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 60px;
+    padding: 12px;
+    opacity: 100%;
+    transition-duration: 150ms;
+    // transition-delay: 0ms;
+    transition-delay: 30ms;
+  }
+  span {
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    transition-duration: 150ms;
+    transition-delay: 0ms;
+
+    background-color: #fbeb6e;
+    background-image: linear-gradient(#fbeb6e, #eb5fbd);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;  
+  }
+}
+
+.navIcon:hover {
+  img {
+    opacity: 0;
+    // transition-delay: 1000ms;
+    transition-delay: 0ms;
+  }
+  span {
+    opacity: 100%;
+    transition-delay: 30ms;
+  }
+}

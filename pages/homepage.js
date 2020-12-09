@@ -87,7 +87,10 @@ const Homepage = ({  }) => {
             </Link>
           </div>
         </div>
-        <img className={styles.logo} src="/logo.png" width="550" />
+        <div className={styles.logo}>
+          <img src="/logo.png" width="550" />
+          <div className={styles.logoLight}></div>
+        </div>
       </div>
     </div>
   );
