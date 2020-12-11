@@ -12,6 +12,10 @@
   align-items: center;
   justify-content: space-around;
 
+  @media only screen and (max-width: 1000px) {
+    margin-left: 0;
+  }
+
   .text {
     min-width: 910px;
   }
@@ -118,6 +122,16 @@
     }
   }
 
+  @keyframes logoGlow {
+    0% {
+      opacity: 100%;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
   .logo {
     position: relative;
     opacity: 0;
@@ -125,6 +139,10 @@
     animation-fill-mode: forwards;
     animation-delay: 200ms;
     top: 50px;
+
+    @media only screen and (max-width: 1600px) {
+      display: none;
+    }
 
     .logoLight {
       position: absolute;
@@ -134,6 +152,8 @@
       border-radius: 50%;
       opacity: 0;
       z-index: -1;
+      animation: logoGlow 800ms ease-in;
+      animation-delay: 200ms;
       transition-duration: 300ms;
     }
   }
@@ -182,8 +202,9 @@
     font-weight: 300;
   }
   .buttonPrimary:hover {
-    background-color: #3037a2;
-    border-color: #3037a2;
+    background-color: #399fdb;
+    border-color: #399fdb;
+    color: white;
   }
   
 

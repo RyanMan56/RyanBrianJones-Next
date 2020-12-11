@@ -3,6 +3,11 @@
   align-items: center;
   justify-content: center;
 
+  @media only screen and (max-width: 1000px) {
+    height: 60px;
+    padding: 0 2%;
+  }
+
   img {
     width: 60px;
     padding: 12px;
