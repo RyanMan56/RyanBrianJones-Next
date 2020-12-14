@@ -10,16 +10,6 @@
   justify-content: space-between;
   animation: slideIn 250ms ease-out;
 
-  @media only screen and (max-width: 1000px) {
-    left: 0;
-    right: 0;
-    width: auto;
-    height: 60px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
   @keyframes slideIn {
     0% {
       left: -60px
@@ -27,6 +17,27 @@
 
     100% {
       left: 0;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    position: relative;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: 60px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    @keyframes slideIn {
+      0% {
+        top: -60px
+      }
+  
+      100% {
+        top: 0;
+      }
     }
   }
 
@@ -42,6 +53,10 @@
     top: unset;
     display: flex;
     margin-left: 10%;
+  }
+
+  @media only screen and (max-width: 470px) {
+    margin-left: 0;
   }
 }
 

@@ -5,20 +5,31 @@ import styles from '../styles/Homepage.module.scss';
 
 const extraTitles = [
   'Freelancer',
-  'Contractor',
-  'Developer',
+    'Contractor',
+    'Developer',
 ];
 
 const title = 'Ryan Brian Jones';
 
 const Title = () => <h1 aria-label="Ryan Brian Jones">Ryan Brian Jones</h1>;
-const AnimatableTitle = () => (
-  <h1 aria-label="Ryan Brian Jones">
-    {[...title].map((letter, index) => (
-      <span className={styles.letter} key={`letter_${index}`}>{letter}</span>
-    ))}
-  </h1>
-);
+const AnimatableTitle = () => {
+  const splitTitle = title.split(" ");
+  let currentLetterIndex = 0;
+  return (
+    <h1 aria-label="Ryan Brian Jones">
+      {splitTitle.map((word, wordIndex) => {
+        const letters = wordIndex === splitTitle.length - 1 ? word : `${word} `;
+        return (
+          <span className={styles.word} key={`word_${wordIndex}`}>
+            {[...letters].map((letter, letterIndex) => (
+              <span style={{ animationDelay: `${(currentLetterIndex++) * 100}ms` }} className={styles.letter} key={`letter_${currentLetterIndex}`}>{letter}</span>
+            ))}
+          </span>
+        )
+      })}
+    </h1>
+  )
+};
 
 const Homepage = ({  }) => {
   const [extraTitle, setExtraTitle] = useState({

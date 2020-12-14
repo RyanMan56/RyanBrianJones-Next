@@ -1,6 +1,10 @@
 .container {
   display: flex;
   min-height: 100vh;
+
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column;
+  }
 }
 
 .textWrapper {
@@ -16,8 +20,21 @@
     margin-left: 0;
   }
 
+  @media only screen and (max-width: 840px) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
   .text {
     min-width: 910px;
+
+    @media only screen and (max-width: 960px) {
+      min-width: 791px;
+    }
+
+    @media only screen and (max-width: 840px) {
+      min-width: unset;
+    }
   }
 
   .titleWrapper {
@@ -31,6 +48,30 @@
     margin-block-end: 0.67em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+
+    @media only screen and (max-width: 960px) {
+      font-size: 40px;
+
+      h1 {
+        font-size: 40px;
+
+        @media only screen and (max-width: 840px) {
+          display: block;
+          
+          .word {
+            margin-bottom: 2%;
+          }
+        }
+      }
+    }
+
+    @media only screen and (max-width: 360px) {
+      font-size: 30px;
+
+      h1 {
+        font-size: 30px;
+      }
+    }
     
     .extraTitle {
       color: #399fdb
@@ -43,6 +84,10 @@
 
     margin: 0;
     display: inline;
+
+    .word {
+      display: inline-block;
+    }
 
     .letter {
       min-width: 21px;
@@ -57,12 +102,6 @@
 
     .letter:hover {
       transform: scale(1.5);
-    }
-
-    @for $i from 1 through 16 {
-      .letter:nth-child(#{$i}n) {
-        animation-delay: #{$i * 100}ms;
-      }
     }
 
     @keyframes titleLetterFade {
@@ -86,6 +125,15 @@
     }
   }
 
+  .subtitle {
+    color: white;
+    opacity: 40%;
+    font-size: 18px;
+    letter-spacing: 5px;
+    font-weight: 200;
+    margin: 1.5% 0;
+  }
+
   .bio {
     color: white;
     opacity: 60%;
@@ -98,6 +146,14 @@
     animation-fill-mode: forwards;
     opacity: 0;
     top: 50px;
+
+    @media only screen and (max-width: 960px) {
+      font-size: 18px;
+    }
+
+    @media only screen and (max-width: 822px) {
+      margin: 30px 0;
+    }
   }
 
   @keyframes bioFadeIn {
@@ -146,6 +202,8 @@
 
     .logoLight {
       position: absolute;
+      width: 1px;
+      height: 1px;
       left: 50%;
       top: 50%;
       box-shadow: 0 0 1000px 200px #57b0e2;
@@ -176,6 +234,10 @@
   top: 20px;
   animation-fill-mode: forwards;
 
+  @media only screen and (max-width: 960px) {
+    margin-bottom: 20px;
+  }
+
   a {
     padding: 1.25% 2%;
     border: 3px solid white;
@@ -185,6 +247,14 @@
     font-weight: 300;
     color: white;
     transition: 200ms;
+
+    @media only screen and (max-width: 960px) {
+      font-size: 18px;
+    }
+
+    @media only screen and (max-width: 630px) {
+      padding: 2% 2%;
+    }
   }
   a:hover {
     background-color: white;
