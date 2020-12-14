@@ -51,26 +51,10 @@
 
     @media only screen and (max-width: 960px) {
       font-size: 40px;
-
-      h1 {
-        font-size: 40px;
-
-        @media only screen and (max-width: 840px) {
-          display: block;
-          
-          .word {
-            margin-bottom: 2%;
-          }
-        }
-      }
     }
 
     @media only screen and (max-width: 360px) {
       font-size: 30px;
-
-      h1 {
-        font-size: 30px;
-      }
     }
     
     .extraTitle {
@@ -80,13 +64,20 @@
 
   h1 {
     color: white;
-    font-size: 50px;
-
+    font-size: inherit;
     margin: 0;
     display: inline;
 
+    @media only screen and (max-width: 840px) {
+      display: block;
+    }
+
     .word {
       display: inline-block;
+
+      @media only screen and (max-width: 840px) {
+        margin-bottom: 2%;
+      }
     }
 
     .letter {
@@ -241,7 +232,6 @@
   a {
     padding: 1.25% 2%;
     border: 3px solid white;
-    // border-radius: 20px;
     font-size: 22px;
     letter-spacing: 5px;
     font-weight: 300;
@@ -262,13 +252,8 @@
   }
 
   .buttonPrimary {
-    // background-color: #F568AB;
-    // border-color: transparent;
-    // background-color: #399fdb;
-    // color: white;
     background-color: white;
     color: #F568AB;
-    // color: #399fdb;
     font-weight: 300;
   }
   .buttonPrimary:hover {
@@ -277,7 +262,6 @@
     color: white;
   }
   
-
   a:first-child {
     margin-right: 5%;
   }
