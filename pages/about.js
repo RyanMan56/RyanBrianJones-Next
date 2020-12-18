@@ -9,17 +9,23 @@ const About = () => {
         <h1>About me</h1>
         <div className={styles.content}>
           <div className={styles.left}>
-            <p>I enjoy keeping up to date with the latest software development trends, and using cutting edge technologies to create highly performant websites and applications that live on the web or mobile devices.</p>
+            <p>I enjoy keeping up to date with the latest software development trends, and using cutting edge technologies to create highly performant websites and applications that live on the web or on mobile devices.</p>
+            <p>I am experienced in frontend and backend development, writing test suites, and database querying using SQL.</p>
+            <p>The projects I develop are hosted on DigitalOcean droplets, or serverlessly on AWS depending on the needs of the project.</p>
             <p>Recently I've been working with the following technologies:</p>
             <ul>
-              <li>JavaScript (ES6+)</li>
+              <li>JavaScript</li>
               <li>React</li>
+              <li>React Native</li>
               <li>Node.js</li>
+              <li>Express</li>
+              <li>SQL</li>
               <li>HTML & (S)CSS</li>
-              <li>Vue</li>
+              <li>Vue.js</li>
               <li>WordPress</li>
               <li>Ember</li>
             </ul>
+            <p>Outside of work I love competing in game jams (such as <a target="_blank" rel="noopener noreferrer" href="https://ldjam.com/">Ludum Dare</a>), watching movies, and learning to play the <a target="_blank" rel="noopener noreferrer" href="https://th.static-thomann.de/thumb/orig/pics/bdb/323239/7502647_800.jpg">ocarina</a></p>
           </div>
           <div className={styles.right}>
             <Gitgraph options={{
