@@ -73,22 +73,25 @@ li {
   display: flex;
   align-items: center;
   list-style: none;
-  padding-left: 40px;
+  padding-left: 30px;
   flex: 0 50%;
-  font-weight: 300;
-  opacity: 100%;
+  font-size: 16px;
   position: relative;
 }
 
 li::before {
+  height: 30px;
   position: absolute;
   content: "🦑";
   /* content: "🌌"; */
   /* content: "🚀"; */
   /* content: "🌠"; */
   /* content: "⭐"; */
+  /* content: "⏵"; */
   left: 0;
   color: #399fdb;
+  display: flex;
+  align-items: center;
 }
 
 @media only screen and (max-width: 822px) {

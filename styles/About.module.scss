@@ -17,11 +17,13 @@
     line-height: 40px;
   }
 
-  .left ul > div {
+  .left ul {
     display: flex;
+    max-width: 540px;
 
     li {
       width: 50%;
+      max-width: 270px;
     }
   }
 
