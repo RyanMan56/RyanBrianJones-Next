@@ -12,4 +12,21 @@
   > div {
     flex: 1;
   }
+
+  p {
+    line-height: 40px;
+  }
+
+  .left ul > div {
+    display: flex;
+
+    li {
+      width: 50%;
+    }
+  }
+
+  .right {
+    justify-content: flex-end;
+    display: flex;
+  }
 }
