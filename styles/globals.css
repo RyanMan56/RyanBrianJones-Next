@@ -82,7 +82,8 @@ li {
 li::before {
   height: 30px;
   position: absolute;
-  content: "🐙";
+  /* content: "🐙"; */
+  content: "💾";  
   /* content: "🌌"; */
   /* content: "🚀"; */
   /* content: "🌠"; */
