@@ -6,13 +6,13 @@ const Navbar = ({  }) => {
   return (
     <div className={styles.container}>
       <div>
-        <Link href='/homepage'>
+        <Link href='/'>
           <a className={styles.navbarIcon}><img src='/logo.png' width='60' /></a>
         </Link>
       </div>
       <div className={styles.navIcons}>
         <NavbarButton
-          href='/homepage'
+          href='/'
           icon='/home.png'
           name='Home'
         />

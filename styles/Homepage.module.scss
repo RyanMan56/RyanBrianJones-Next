@@ -1,24 +1,11 @@
-.container {
-  display: flex;
-  min-height: 100vh;
-
-  @media only screen and (max-width: 1000px) {
-    flex-direction: column;
-  }
-}
 
 .textWrapper {
   flex: 1;
-  margin-left: 60px;
   margin-top: auto;
   margin-bottom: auto;
   display: flex;
   align-items: center;
   justify-content: space-around;
-
-  @media only screen and (max-width: 1000px) {
-    margin-left: 0;
-  }
 
   @media only screen and (max-width: 840px) {
     margin-left: 20px;

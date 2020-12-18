@@ -1,54 +1,109 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.scss'
-import Header from "../components/Header"
-import Waves from "../components/Waves.js"
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import Navbar from '../components/Navbar';
+import Page from '../components/Page';
+import styles from '../styles/Homepage.module.scss';
 
-export default function Home() {
+const extraTitles = [
+  'Freelancer',
+    'Contractor',
+    'Developer',
+];
+
+const title = 'Ryan Brian Jones';
+
+const Title = () => <h1 aria-label="Ryan Brian Jones">Ryan Brian Jones</h1>;
+const AnimatableTitle = () => {
+  const splitTitle = title.split(" ");
+  let currentLetterIndex = 0;
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Ryan Brian Jones | Freelance Web Development</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header/>
-      <main className={styles.main}> 
-        <img src="/logo.png" className={styles.hero_ryan} />   
-        {/* <div> */}
-          <h1 className={styles.title}>FREELANCE WEB<br/>DEVELOPER</h1>
-          <div className={styles.navigation_buttons}>
-            <button>ABOUT</button>
-            <span> | </span>
-            {/* <button>PORTFOLIO</button> */}
-            <button>WHY US</button>
-            <span> | </span>
-            <button>CONTACT</button>
+    <h1 aria-label="Ryan Brian Jones">
+      {splitTitle.map((word, wordIndex) => {
+        const letters = wordIndex === splitTitle.length - 1 ? word : `${word} `;
+        return (
+          <span className={styles.word} key={`word_${wordIndex}`}>
+            {[...letters].map((letter, letterIndex) => (
+              <span style={{ animationDelay: `${(currentLetterIndex++) * 100}ms` }} className={styles.letter} key={`letter_${currentLetterIndex}`}>{letter}</span>
+            ))}
+          </span>
+        )
+      })}
+    </h1>
+  )
+};
+
+const Homepage = ({  }) => {
+  const [extraTitle, setExtraTitle] = useState({
+    current: '', selectedIndex: -1, reverse: true, waitCycles: null,
+  });
+  const [pageLoaded, setPageLoaded] = useState(false);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setExtraTitle(prevValue => {
+        let newValue = {...prevValue};
+
+        if (!newValue.waitCycles) {
+          if (prevValue.current.length <= 0) {
+            newValue.reverse = true;
+            newValue.selectedIndex = (prevValue.selectedIndex + 1) % extraTitles.length;
+            newValue.waitCycles = 20;
+          } else if (prevValue.current.length === ` ${extraTitles[prevValue.selectedIndex]}`.length) {
+            newValue.reverse = false;
+            newValue.waitCycles = 40;
+          }
+          
+        }
+
+        if (newValue.waitCycles) {
+          newValue.waitCycles--;
+        } 
+        if (!newValue.waitCycles) {
+          if (newValue.reverse) {
+            newValue.current = ` ${extraTitles[newValue.selectedIndex]}`.substr(0, prevValue.current.length + 1);
+          } else {
+            newValue.current = prevValue.current.substr(0, prevValue.current.length - 1);
+          }
+        }
+        return newValue;
+      });
+    }, 100);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    setPageLoaded(true);
+  }, []);
+
+  return (
+    <Page>
+      <div className={styles.textWrapper}>
+        <div className={styles.text}>
+          <div className={styles.titleWrapper}>
+            {pageLoaded ? ( // so that crawlers get the title in just a h1
+              <AnimatableTitle />
+            ) : <Title />}
+            <span className={styles.extraTitle}>{extraTitle.current}</span>
+            <span className={styles.cursor}>_</span>
           </div>
-        {/* </div> */}
-      </main>
-      <Waves/>
-      
-      <div className={styles.main_body}>
-        <div className={styles.main_content}>
-          <h2>ABOUT</h2>
-          <div className={styles.h2_underline} />
-          <div className={styles.about_section}>
-            <div className={styles.text}>
-              <p>
-                Spicy jalapeno kielbasa flank aliquip, sed commodo ribeye id et prosciutto ham ut pig pork. Proident in brisket beef sunt corned beef. Fatback quis nulla pork chop sirloin enim cillum magna short ribs. Aute chicken buffalo duis cupidatat est proident doner short loin fugiat kielbasa consequat biltong incididunt.
-              </p>
-              <p>
-                Chicken pastrami ea anim. Consectetur ball tip ullamco ham hock. Drumstick shank t-bone, aliqua tenderloin boudin ex. Enim ipsum sed, brisket cupim shank sunt qui ex sint laborum. Picanha tongue spare ribs, leberkas nisi deserunt pastrami. Deserunt eu jowl andouille, qui elit nostrud in porchetta ribeye doner et turducken.
-              </p>
-              <p>
-                Duis shank proident alcatra, short ribs short loin ad dolore. Fatback kevin corned beef esse shankle lorem, consequat anim nisi mollit jowl boudin porchetta aliqua. Prosciutto velit pork belly, ground round andouille dolor ullamco kielbasa pork rump eu aliqua jowl nulla meatball. Picanha pork belly cow incididunt quis, laborum sunt.
-              </p>
-            </div>
-            <div className={styles.image}>
-              <img width="500" src="/me.jpg" />
-            </div>
+          <p className={styles.bio}>Hi, I'm Ryan. A full-stack developer based in Liverpool.</p>
+          <p className={styles.bio}>I make web apps and mobile apps, and host them serverlessly,</p>
+          <p className={styles.bio}>ensuring they're reliable and cheap to run.</p>
+          <div className={styles.buttonWrapper}>
+            <Link href="/contact">
+              <a className={styles.buttonPrimary}>Contact me</a>
+            </Link>
+            <Link href="/my-work">
+              <a>My work</a>
+            </Link>
           </div>
         </div>
+        <div className={styles.logo}>
+          <img src="/logo.png" width="550" />
+          <div className={styles.logoLight}></div>
+        </div>
       </div>
-    </div>
-  )
+    </Page>
+  );
 }
+
+export default Homepage;

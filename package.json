@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@gitgraph/react": "^1.5.4",
     "next": "9.5.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
