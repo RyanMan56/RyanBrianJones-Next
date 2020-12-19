@@ -6,8 +6,8 @@ import styles from '../styles/Homepage.module.scss';
 
 const extraTitles = [
   'Freelancer',
-    'Contractor',
-    'Developer',
+  'Contractor',
+  'Developer',
 ];
 
 const title = 'Ryan Brian Jones';
