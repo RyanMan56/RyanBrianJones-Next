@@ -74,6 +74,9 @@ const Homepage = ({  }) => {
     setPageLoaded(true);
   }, []);
 
+  // TODO: COMMENT OUT WHEN READY TO SHOW THE WORLD!
+  return null;
+
   return (
     <Page>
       <div className={styles.textWrapper}>
