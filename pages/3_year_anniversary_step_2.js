@@ -17,13 +17,6 @@ function ThreeYearAnniversary() {
         <p>to see them in full</p>
         <p></p>
         {/* 3456 × 4608. Asp = 0.75 */}
-        {/* <div className={styles.imgLeft}>
-          <Image src="/3_year_anniversary/2018/IMG_20180821_202420.jpg" width={200} height={200/0.75} />
-        </div>
-        <div className={styles.imgRight}>
-          <Image src="/3_year_anniversary/2018/IMG_20180902_224213.jpg" width={200} height={200/0.75} />
-        </div> */}
-
         <AnniversaryImage src="/3_year_anniversary/2018/IMG_20180821_202420.jpg" position="left" />
         <AnniversaryImage src="/3_year_anniversary/2018/IMG_20180902_224213.jpg" position="right" />
         <AnniversaryImage src="/3_year_anniversary/2018/IMG_20180910_194139.jpg" position="left" />
