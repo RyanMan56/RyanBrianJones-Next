@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.main{
+.main {
   max-width: 1200px;
   width: 100%;
   padding-bottom: 70px;
@@ -14,50 +14,49 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: whitesmoke;  
+  color: whitesmoke;
   // padding: 2.5% 0 5% 0;
   justify-content: space-around;
   margin-top: 80px;
-  
+
   // @media only screen and (min-height: 1200px) {
-    // padding: 5% 0 10% 0;
+  // padding: 5% 0 10% 0;
   // }
 }
 
 .logo {
-    width: 85px;
-    height: 70.11px;
+  width: 85px;
+  height: 70.11px;
 }
-
-
 
 .hero_ryan {
   height: 300px;
 }
 
 .title {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 900;
   font-size: 72px;
   line-height: 84px;
   text-align: center;
   letter-spacing: 0.075em;
-  background: -webkit-linear-gradient(top, #F568AB 0%, #F7E056 112%);
+  background: -webkit-linear-gradient(top, #f568ab 0%, #f7e056 112%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0;
 }
 
 .navigation_buttons {
-  button, span {
+  button,
+  span {
     font-family: Roboto Condensed;
     font-style: normal;
     font-weight: 300;
     font-size: 30px;
     line-height: 35px;
     letter-spacing: 0.09em;
-    color: #F7E056;
+    color: #f7e056;
     appearance: none;
     background-color: unset;
     border: none;
@@ -87,10 +86,8 @@
   }
 
   p {
-    letter-spacing: 1px;
     line-height: 32px;
     font-size: 21px;
-
   }
 
   .about_section {
@@ -100,7 +97,7 @@
   .text {
     flex: 2;
     padding-right: 5%;
-    
+
     :first-child {
       margin-top: 0;
     }
@@ -118,6 +115,6 @@
   height: 3px;
   width: 100%;
   // background: -webkit-linear-gradient(left, #F7E056 -50%, #F568AB 50%, #F7E056 150%);
-  background-color: #F568AB;
+  background-color: #f568ab;
   margin-bottom: 50px;
 }
