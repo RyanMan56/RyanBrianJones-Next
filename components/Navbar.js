@@ -17,7 +17,7 @@ const Navbar = ({}) => {
         <NavbarButton href="/about" icon="/about.png" name="About me" />
         <NavbarButton href="/my-work" icon="/my-work.png" name="Portfolio" />
         <NavbarButton href="/blog" icon="/blog.png" name="Blog" />
-        <NavbarButton href="/contact" icon="/contact.png" name="Contact me" />
+        <NavbarButton href="/contact" icon="/contact.png" name="Get in touch" />
       </div>
       <div></div>
     </div>

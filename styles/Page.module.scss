@@ -1,15 +1,14 @@
 .container {
   display: flex;
-  min-height: 100vh;
+  flex: 1;
 
   @media only screen and (max-width: 1000px) {
     flex-direction: column;
   }
-
 }
 
 .contentWrapper {
-  margin-left: 60px;
+  margin-left: $sidebar-width-large;
   display: flex;
   flex: 1;
 

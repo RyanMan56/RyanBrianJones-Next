@@ -1,10 +1,11 @@
 import { Canvas } from "@react-three/fiber";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import Navbar from "../components/Navbar";
 import Page from "../components/Page";
 import styles from "../styles/Homepage.module.scss";
 import Cube from "../components/three/Cube";
+import { Vector3 } from "three";
+import Sphere from "../components/three/Sphere";
 
 const extraTitles = ["Freelancer", "Contractor", "Developer"];
 
@@ -38,6 +39,8 @@ const AnimatableTitle = () => {
 
 function Homepage({}) {
   const canvasRef = useRef();
+  const sceneRef = useRef();
+  const cameraRef = useRef();
   const [extraTitle, setExtraTitle] = useState({
     current: "",
     selectedIndex: -1,
@@ -92,6 +95,11 @@ function Homepage({}) {
     setPageLoaded(true);
   }, []);
 
+  // useEffect(() => {
+  //   console.log(sceneRef.current);
+  //   sceneRef.current.add(cameraRef.current);
+  // }, []);
+
   return (
     <Page>
       <div className={styles.textWrapper}>
@@ -116,7 +124,7 @@ function Homepage({}) {
           </p>
           <div className={styles.buttonWrapper}>
             <Link href="/contact">
-              <a className={styles.buttonPrimary}>Contact me</a>
+              <a className={styles.buttonPrimary}>Get in touch</a>
             </Link>
             <Link href="/my-work">
               <a>My work</a>
@@ -124,17 +132,29 @@ function Homepage({}) {
           </div>
         </div>
         <div className={styles.logo}>
-          {/* <img src="/logo.png" width="550" />
-          <div className={styles.logoLight}></div> */}
-          <Canvas ref={canvasRef} style={{ height: 300 }}>
+          <Canvas ref={canvasRef} camera={{ position: [0, 0, 10] }}>
             <ambientLight />
-            <directionalLight
-              // intensity={10.0}
-              // color={0x399fdb}
-              color={0xffffff}
-              position={[-2, -2, 5]}
-            />
+            {/* @ts-ignore TODO: Figure out this typing issue */}
+            <directionalLight color={0xffffff} position={[-5, -2, 5]} />
             <Cube />
+            <Sphere
+              position={[0, 0, 3]}
+              rotationAxis={new Vector3(1, 1, 0)}
+              radius={0.5}
+              color={0x8039db}
+            />
+            <Sphere
+              position={[0, 0, -4]}
+              rotationAxis={new Vector3(1, -1, 0)}
+              radius={0.25}
+              color={0xf568ab}
+            />
+            <Sphere
+              position={[0, 0, -3]}
+              rotationAxis={new Vector3(0, 1, 0)}
+              radius={0.35}
+              color={0x5a39db}
+            />
           </Canvas>
         </div>
       </div>
